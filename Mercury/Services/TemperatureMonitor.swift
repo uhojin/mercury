@@ -47,7 +47,7 @@ class TemperatureMonitor: ObservableObject {
 
     private func startPolling() {
         timer?.cancel()
-        timer = Timer.publish(every: settings.refreshInterval.rawValue, on: .main, in: .common)
+        timer = Timer.publish(every: settings.refreshInterval.rawValue, on: .main, in: .default)
             .autoconnect()
             .sink { [weak self] _ in
                 self?.updateTemperatures()
