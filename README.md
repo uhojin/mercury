@@ -1,6 +1,5 @@
 <h1 align="center">Mercury</h1>
 <p align="center">A tiny temperature monitor that lives in your menu bar.</p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-14%2B-black?style=flat-square" />
   <img src="https://img.shields.io/github/actions/workflow/status/uhojin/mercury/release.yml?style=flat-square&color=black&label=build" />
@@ -9,28 +8,27 @@
 
 <br />
 
-<!-- Add your screenshot here -->
-<!-- <p align="center">
-  <img src="assets/screenshot.png" width="300" />
-</p> -->
+<p align="center">
+  <img src="assets/screenshot.png" width="227" />
+</p>
 
 ## About
 
 Mercury reads temperatures directly from your Mac's SMC (System Management Controller) and displays them in the menu bar. No background daemons, no Electron, no web views. Just a native SwiftUI app under 200KB.
 
-- **Native** -- Built with SwiftUI and IOKit. Nothing else.
-- **Fast** -- Direct SMC reads. Sub-millisecond sensor polling.
-- **Light** -- <1% CPU at default refresh rate. No network calls.
-- **Minimal** -- One menu bar item. No dock icon. No windows.
+- **Native** - Built with SwiftUI and IOKit. Nothing else.
+- **Fast** - Direct SMC reads. Sub-millisecond sensor polling.
+- **Light** - <1% CPU at default refresh rate. No network calls.
+- **Minimal** - One menu bar item. No dock icon. No windows.
 
 ## Features
 
 - CPU, GPU, and Battery temperature monitoring
 - Dynamic menu bar icon (low / medium / high)
 - Celsius and Fahrenheit
-- Configurable refresh interval (1--10s)
+- Configurable refresh interval (1~10s)
 - Auto-detects available sensors per chip
-- Supports Apple Silicon (M1--M5) and Intel
+- Supports Apple Silicon (M1~M5) and Intel
 
 ## Install
 
