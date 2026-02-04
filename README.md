@@ -1,12 +1,9 @@
-<p align="center">
-  <img src="https://developer.apple.com/sf-symbols/" width="0" height="0" />
-  <h1 align="center">Mercury</h1>
-  <p align="center">A tiny temperature monitor that lives in your menu bar.</p>
-</p>
+<h1 align="center">Mercury</h1>
+<p align="center">A tiny temperature monitor that lives in your menu bar.</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-14%2B-black?style=flat-square" />
-  <img src="https://img.shields.io/badge/Apple_Silicon-supported-black?style=flat-square" />
+  <img src="https://img.shields.io/github/actions/workflow/status/uhojin/mercury/release.yml?style=flat-square&color=black&label=build" />
   <img src="https://img.shields.io/github/license/uhojin/mercury?style=flat-square&color=black" />
 </p>
 
