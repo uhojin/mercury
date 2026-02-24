@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="assets/icon.png" width="128" height="128" />
+</p>
 <h1 align="center">Mercury</h1>
 <p align="center">A tiny temperature monitor that lives in your menu bar.</p>
 <p align="center">
