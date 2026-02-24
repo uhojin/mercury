@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="assets/icon.png" width="128" height="128" />
+</p>
 <h1 align="center">Mercury</h1>
 <p align="center">A tiny temperature monitor that lives in your menu bar.</p>
 <p align="center">
@@ -14,7 +17,7 @@
 
 ## About
 
-Mercury reads temperatures directly from your Mac's SMC (System Management Controller) and displays them in the menu bar. No background daemons, no Electron, no web views. Just a native SwiftUI app under 200KB.
+Mercury reads temperatures directly from your Mac's SMC (System Management Controller) and displays them in the menu bar.
 
 - **Native** - Built with SwiftUI and IOKit. Nothing else.
 - **Fast** - Direct SMC reads. Sub-millisecond sensor polling.
