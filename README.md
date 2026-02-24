@@ -1,8 +1,12 @@
+<h1>
 <p align="center">
-  <img src="assets/icon.png" width="128" height="128" />
+  <img src="assets/icon.png" alt="Mercury" width="128">
+  <br>Mercury
 </p>
-<h1 align="center">Mercury</h1>
-<p align="center">A tiny temperature monitor that lives in your menu bar.</p>
+</h1>
+<p align="center">
+  A tiny temperature monitor that lives in your menu bar.
+</p>
 <p align="center">
   <img src="https://img.shields.io/badge/macOS-14%2B-black?style=flat-square" />
   <img src="https://img.shields.io/github/actions/workflow/status/uhojin/mercury/release.yml?style=flat-square&color=black&label=build" />
