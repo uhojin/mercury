@@ -15,6 +15,7 @@
 		A10000000000000000000007 /* SMCKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* SMCKeys.swift */; };
 		A10000000000000000000008 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* Settings.swift */; };
 		A10000000000000000000009 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* IOKit.framework */; };
+		A10000000000000000000011 /* HIDSensorBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* HIDSensorBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		A2000000000000000000000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2000000000000000000000C /* Mercury.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mercury.entitlements; sourceTree = "<group>"; };
 		A20000000000000000000010 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		A20000000000000000000011 /* HIDSensorBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIDSensorBridge.h; sourceTree = "<group>"; };
+		A20000000000000000000012 /* HIDSensorBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIDSensorBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 			children = (
 				A20000000000000000000004 /* SMCService.swift */,
 				A20000000000000000000005 /* TemperatureMonitor.swift */,
+				A20000000000000000000011 /* HIDSensorBridge.h */,
+				A20000000000000000000012 /* HIDSensorBridge.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				A10000000000000000000006 /* TemperatureSensor.swift in Sources */,
 				A10000000000000000000007 /* SMCKeys.swift in Sources */,
 				A10000000000000000000008 /* Settings.swift in Sources */,
+				A10000000000000000000011 /* HIDSensorBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mercury.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mercury/Services/HIDSensorBridge.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -357,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mercury.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mercury/Services/HIDSensorBridge.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

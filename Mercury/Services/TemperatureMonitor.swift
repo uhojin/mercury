@@ -17,13 +17,22 @@ class TemperatureMonitor: ObservableObject {
     private var hasLoggedOnce = false
 
     // Expose sensor availability for UI
-    var hasGPUSensors: Bool { !keySet.gpuKeys.isEmpty }
+    var hasGPUSensors: Bool { hidAvailable || !keySet.gpuKeys.isEmpty }
     var hasBatterySensors: Bool { !keySet.batteryKeys.isEmpty }
 
     private var discoveredKeys: [String] = []
+    private var hidAvailable = false
 
     init() {
         chipType = ChipType.detect()
+
+        // Check if HID temperature sensors are available (more accurate on Apple Silicon)
+        hidAvailable = HIDSensorReader.isAvailable()
+        if hidAvailable {
+            print("[Mercury] HID temperature sensors available")
+        } else {
+            print("[Mercury] HID temperature sensors not available, using SMC only")
+        }
 
         // First, discover what temperature keys actually exist on this Mac
         discoveredKeys = smcService.discoverTemperatureKeys()
@@ -55,8 +64,15 @@ class TemperatureMonitor: ObservableObject {
     }
 
     private func updateTemperatures() {
-        cpuTemperature = readAverageTemperature(keys: keySet.cpuKeys)
-        gpuTemperature = readAverageTemperature(keys: keySet.gpuKeys)
+        if hidAvailable {
+            let hidTemps = HIDSensorReader.readTemperatures()
+            cpuTemperature = hidTemps["cpu"]?.doubleValue
+            gpuTemperature = hidTemps["gpu"]?.doubleValue
+        } else {
+            cpuTemperature = readAverageTemperature(keys: keySet.cpuKeys)
+            gpuTemperature = readAverageTemperature(keys: keySet.gpuKeys)
+        }
+        // Battery always from SMC (HID doesn't expose battery temp)
         batteryTemperature = readAverageTemperature(keys: keySet.batteryKeys)
 
         if !hasLoggedOnce {

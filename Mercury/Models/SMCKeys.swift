@@ -78,7 +78,7 @@ struct SMCKeySet {
             // CPU/SoC temperature keys
             else if k.hasPrefix("TC") || k.hasPrefix("TP") || k.hasPrefix("TE") ||
                     k.hasPrefix("TM") || k.hasPrefix("TF") || k.hasPrefix("TS") ||
-                    k.hasPrefix("TH") || k.hasPrefix("TD") || k.hasPrefix("TR") ||
+                    k.hasPrefix("TH") || k.hasPrefix("TD") ||
                     k.hasPrefix("TK") || k.hasPrefix("TL") || k.hasPrefix("T0") ||
                     k.hasPrefix("T-") {
                 cpuKeys.append(key)
