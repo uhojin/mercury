@@ -21,10 +21,10 @@
 
 ## About
 
-Mercury reads temperatures directly from your Mac's SMC (System Management Controller) and displays them in the menu bar.
+Mercury reads temperatures from your Mac's HID sensors and SMC, and displays them in the menu bar.
 
-- **Native** - Built with SwiftUI and IOKit. Nothing else.
-- **Fast** - Direct SMC reads. Sub-millisecond sensor polling.
+- **Native** - Built with SwiftUI, IOKit, and IOHIDEventSystem.
+- **Fast** - Direct sensor reads. Sub-millisecond polling.
 - **Light** - <1% CPU at default refresh rate. No network calls.
 - **Minimal** - One menu bar item. No dock icon. No windows.
 
