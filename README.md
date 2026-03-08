@@ -16,7 +16,7 @@
 <br />
 
 <p align="center">
-  <img src="assets/screenshot.png" width="227" />
+  <img src="assets/screenshot.png" width="210" />
 </p>
 
 ## About
