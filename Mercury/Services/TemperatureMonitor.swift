@@ -126,7 +126,11 @@ class TemperatureMonitor: ObservableObject {
 
     private func formatTemperature(_ celsius: Double, unit: TemperatureUnit) -> String {
         let value = unit == .fahrenheit ? celsius * 9/5 + 32 : celsius
-        return String(format: "%.0f°%@", value, unit.symbol)
+        if settings.showUnit {
+            return String(format: "%.0f°%@", value, unit.symbol)
+        } else {
+            return String(format: "%.0f°", value)
+        }
     }
 
 }

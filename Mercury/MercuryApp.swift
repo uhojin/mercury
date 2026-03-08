@@ -33,6 +33,7 @@ struct MercuryApp: App {
                 }
 
                 Toggle("Show Icon", isOn: $settings.showMenuBarIcon)
+                Toggle("Show Unit", isOn: $settings.showUnit)
             }
 
             Divider()

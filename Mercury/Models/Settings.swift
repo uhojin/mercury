@@ -63,6 +63,12 @@ class Settings: ObservableObject {
         }
     }
 
+    @Published var showUnit: Bool {
+        didSet {
+            UserDefaults.standard.set(showUnit, forKey: "showUnit")
+        }
+    }
+
     private init() {
         let defaults = UserDefaults.standard
 
@@ -88,5 +94,6 @@ class Settings: ObservableObject {
         }
 
         self.showMenuBarIcon = defaults.object(forKey: "showMenuBarIcon") as? Bool ?? true
+        self.showUnit = defaults.object(forKey: "showUnit") as? Bool ?? true
     }
 }
